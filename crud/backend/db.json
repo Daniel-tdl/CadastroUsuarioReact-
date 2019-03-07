@@ -2,10 +2,13 @@
     "users": [{
         "id": 1,
         "name":"Daniel Coutinho",
-        "email": "daniel.coutinho.tdl@gmail.com"
+        "email": "daniel.coutinho.tdl@gmail.com",
+        "teste": "teste"
     }, {
         "id": 2,
         "name":"Maria Coutinho",
-        "email": "teste@gmail.com"
+        "email": "teste@gmail.com",
+        "teste": "teste"
     }]
 }
+
