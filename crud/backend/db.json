@@ -1,12 +1,34 @@
 {
-    "users": [{
-        "id": 1,
-        "name":"Daniel Coutinho",
-        "email": "daniel.coutinho.tdl@gmail.com"
-    }, {
-        "id": 2,
-        "name":"Maria Coutinho",
-        "email": "teste@gmail.com"
-    }]
+  "users": [
+    {
+      "id": 1,
+      "name": "Daniel Coutinho",
+      "email": "daniel.coutinho.tdl@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Maria Coutinho",
+      "email": "teste@gmail.com"
+    },
+    {
+      "name": "Jamison",
+      "email": "Jamison@hotmail.com",
+      "id": 3
+    },
+    {
+      "name": "Daniel Junior",
+      "email": "DanielCoutinhio@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Juliana ",
+      "email": "Juliana@hotmail.com ",
+      "id": 5
+    },
+    {
+      "name": "Amanda",
+      "email": "Amanda@hotmail.com",
+      "id": 6
+    }
+  ]
 }
-

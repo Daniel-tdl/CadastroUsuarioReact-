@@ -8,7 +8,7 @@ const headreProps = {
     subtitle: 'Cadastro de usuários: incluir, Listar, Alterar e Excluir!'
 }
 
-const baseUrl = 'http://localhost:3000/ost:3000/users'
+const baseUrl = 'http://localhost:3000/users'
 const initialState = {
     user: { name: '', email: '' },
     list: []
@@ -24,7 +24,7 @@ export default class UserCrud extends Component {
 
     save() {
         const user = this.state.user
-        const method = user.id ? 'PUT' : 'POST'
+        const method = user.id ? 'put' : 'post'
         const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
         
         axios[method](url, user) 
@@ -42,7 +42,7 @@ export default class UserCrud extends Component {
 
     updateField(event) {
         const user = { ...this.state.user }
-        user[user.target.name] = event.target.value
+        user[event.target.name] = event.target.value
         this.setState({ user })
     }
 
@@ -54,23 +54,27 @@ export default class UserCrud extends Component {
                         <div className="form-group">
                            <label> Nome: </label>
                            <input type="text" className="form-control"  
-                                name="name" value={this.state.user.name} 
-                                onChange={ e => this.updateField(e)}
+                                name="name" 
+                                value={this.state.user.name} 
+                                onChange={e => this.updateField(e)}
                                 placeholder="Digite o nome... " /> 
                         </div>
                     </div>
+
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                        <label> E-mail: </label>
+                            <label> E-mail: </label>
                            <input type="text" className="form-control"  
-                                name="email" value={this.state.user.email} 
+                                name="email" 
+                                value={this.state.user.email} 
                                 onChange={ e => this.updateField(e)}
                                 placeholder="Digite o e-mail... " />   
                         </div>
                     </div>    
                 </div>
 
-                <hr/>
+                <hr />
+
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
                         <button className="btn btn-primary" onClick={e => this.save(e)}>
